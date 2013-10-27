@@ -10,13 +10,40 @@
  *
  *= require twitter/bootstrap
  *= require bootstrap-select.min.css
- *= require select2-bootstrap.css
- *= requie select2.css
+ *= require select2
+ *= require select2-bootstrap
  *= require_self
  *= require_tree .
  */
+ body {
+ 	
+ 	background-color: #34495e;
+ 	background-color: #2980b9;
+ }
 
 .container {
 	width: 700px;
-	margin: 20px auto;
+	margin: 50px auto;
+	padding-bottom: 20px;
+	border-radius: 0 0 5px 5px;
+	background-color: white;
 }
+
+.nav-container {
+	width: 700px;
+	margin: 0 auto;
+}
+
+.navbar {
+	border-radius: 0;
+	margin-bottom: 0;
+}
+
+.select2-container-multi, .select2-container {
+	display: block;
+	width: 100%;
+	height: 34px;
+	font-size: 14px;
+}
+
+

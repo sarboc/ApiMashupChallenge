@@ -17,9 +17,11 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
   gem 'bootstrap-sass-rails'
   gem 'uglifier', '>= 1.0.3'
+  gem "select2-rails", "~> 3.5.0"
 end
 
 gem 'jquery-rails'
+
 
 group :development, :test do
   gem 'rspec-rails'
