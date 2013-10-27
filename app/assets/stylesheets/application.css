@@ -46,4 +46,7 @@
 	font-size: 14px;
 }
 
+ul.select2-results {
+ max-height: 150px;
+}
 
