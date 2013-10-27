@@ -23,7 +23,7 @@
 <p>Need some info before making a decision? Here's some quick info on the APIs</p>
 <table class="table table-hover">
 	<thead>
-		<th>Attributes</th>
+		<th></th>
 		<% @apis.each do |api| %>
 			<th><%= api.name %></th>
 		<% end %>
@@ -39,6 +39,12 @@
 			<td>Developer key required:</td>
 			<% @apis.each do |api| %>
 				<td><%= api.requires_key.capitalize %></td>
+			<% end %>
+		</tr>
+		<tr>
+			<td>Mashups:</td>
+			<% @apis.each do |api| %>
+				<td><%= link_to "#{api.mashups.count} mashups with this API", api_mashups_path(api.id), target: "_blank" %></td>
 			<% end %>
 		</tr>
 	</tbody>

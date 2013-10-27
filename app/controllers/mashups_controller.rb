@@ -19,6 +19,11 @@ class MashupsController < ApplicationController
 		apis.each do |api|
 			@api_list << [api.name, api.id]
 		end
+
+		unless params[:apis] = ""
+			@selected = params[:apis].split("-").map{ |id| id.to_i }
+		end
+
 	end
 
 	def create
