@@ -14,10 +14,24 @@ class MashupsController < ApplicationController
 
 	def new
 		@mashup = Mashup.new
+		apis = Api.all
+		@api_list = []
+		apis.each do |api|
+			@api_list << [api.name, api.id]
+		end
 	end
 
 	def create
 		new_mashup = Mashup.create(params[:mashup])
+		
+		selected_apis = params[:api_id]
+		apis = []
+		selected_apis.each do |id|
+			apis << Api.find(id)
+		end
+
+		new_mashup.apis << apis
+
 		redirect_to new_mashup
 	end
 

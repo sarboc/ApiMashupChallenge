@@ -13,4 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
+//= require bootstrap-select.min.js
+//= require select2.min.js
 //= require_tree .
+
+$(document).ready( function() {
+	$("#api-list").select2();
+	$(".selectpicker").selectpicker();
+})
+	
