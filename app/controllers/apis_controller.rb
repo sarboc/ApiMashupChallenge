@@ -26,7 +26,7 @@ class ApisController < ApplicationController
 
 	def update
 		found_api = Api.find(params[:id])
-		found_api.update_attributes(params[:sample])
+		found_api.update_attributes(params[:api])
 		redirect_to found_api
 	end
 

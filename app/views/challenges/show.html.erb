@@ -1,15 +1,15 @@
 <div class="jumbotron text-center">
-	<h2>Your challenge is:</h2>
+	<h4>Your challenge is:</h4>
 		<% @apis.each do |api| %>
 			<h2><%= api.name %></h2>
 			<% unless api == @apis.last %>
-				<h2>+</h2>
+				<h2>&</h2>
 			<% end %>
 		<% end %>
 	<div class="row">
 		<div class="col-md-6">
 			<h2>
-				<%= link_to "Challenge accepted!", new_mashup_path, class: "btn btn-success btn-lg btn-block" %>
+				<%= link_to "Challenge accepted!", new_mashup_path(apis: @api_ids), class: "btn btn-success btn-lg btn-block" %>
 			</h2>
 		</div>
 		<div class="col-md-6">
@@ -19,3 +19,27 @@
 		</div>
 	</div>
 </div>
+
+<p>Need some info before making a decision? Here's some quick info on the APIs</p>
+<table class="table table-hover">
+	<thead>
+		<th>Attributes</th>
+		<% @apis.each do |api| %>
+			<th><%= api.name %></th>
+		<% end %>
+	</thead>
+	<tbody>
+		<tr>
+			<td>API Homepage:</td>
+			<% @apis.each do |api| %>
+				<td><%= link_to api.url, api.url, target: "_blank" %></td>
+			<% end %>
+		</tr>
+		<tr>
+			<td>Developer key required:</td>
+			<% @apis.each do |api| %>
+				<td><%= api.requires_key.capitalize %></td>
+			<% end %>
+		</tr>
+	</tbody>
+</table>
