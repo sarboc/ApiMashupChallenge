@@ -20,7 +20,7 @@ class MashupsController < ApplicationController
 			@api_list << [api.name, api.id]
 		end
 
-		unless params[:apis] = ""
+		if params[:apis]
 			@selected = params[:apis].split("-").map{ |id| id.to_i }
 		end
 

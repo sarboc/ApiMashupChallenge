@@ -22,6 +22,8 @@ $(document).ready( function() {
 		placeholder: "Select up to 5 APIs",
 		maximumSelectionSize: 5
 	});
+
+	$('.dropdown-toggle').dropdown()
 	// $(".selectpicker").selectpicker();
 })
 	
