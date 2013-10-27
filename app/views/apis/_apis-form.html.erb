@@ -1,0 +1,26 @@
+<%= form_for @api, html: {role: "form"} do |f| %>
+  <div class="form-group">
+		<label for="name">Name of the API</label>
+		<%= f.text_field :name, class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<label for="url">URL for API dev tools</label>
+		<%= f.text_field :url, class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<label for="key">Is a developer key required?</label>
+		<div class="radio">
+		  	<%= radio_button("api", "requires_key", "yes") %>
+		  	<%= label_tag(:requires_key_yes, "Yes, a developer key is required") %>
+		</div>
+		<div class="radio">
+			<%= radio_button("api", "requires_key", "no") %>
+			<%= label_tag(:requires_key_yes, "No, a developer key is not required") %>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="description">API description (features, available parameters, etc.)</label>
+		<%= f.text_area :description, class: "form-control" %>
+	</div>
+	<%= f.submit class: "btn btn-primary"%>
+<% end %>

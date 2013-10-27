@@ -1,0 +1,39 @@
+<p class="text-right">
+	<%= link_to "New", new_api_path %>  |  
+	<%= link_to "Edit",  edit_api_path(@api) %>  |  
+	<%= link_to "Delete",  api_path(@api), method: :delete %>
+</p>
+
+<h2 class="page-header text-center"><%= @api.name %></h2>
+
+<p><%= simple_format(@api.description) %></p>
+
+<table class="table table-hover table-bordered">
+	<thead>
+		<th colspan=2 >API Info</th>
+	</thead>
+	<tbody>
+		<tr>
+			<td>API homepage:</td>
+			<td><%= link_to @api.url, @api.url %></td>
+		</tr>
+		<tr>
+			<td>Developer key required:</td>
+			<td><%= @api.requires_key.capitalize %></td>
+		</tr>
+	</tbody>
+</table>
+
+<table class="table table-hover table-bordered">
+	<thead>
+		<th colspan=2 >Mashups using this API</th>
+	</thead>
+	<tbody>
+		<% @api.mashups.each do |mashup| %>
+		<tr>
+			<td><%= link_to mashup.name, mashup_path(mashup) %></td>
+			<td><%= link_to mashup.url, mashup.url %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>

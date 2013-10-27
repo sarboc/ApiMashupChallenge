@@ -1,0 +1,22 @@
+<p class="text-right">
+	<%= link_to "New", new_mashup_path %>  |  
+	<%= link_to "Edit",  edit_mashup_path(@mashup) %>  |  
+	<%= link_to "Delete",  mashup_path(@mashup), method: :delete %>
+</p>
+
+<h2 class="page-header text-center"><%= @mashup.name %></h2>
+<p><%= link_to @mashup.url, @mashup.url %></p>
+<p><%= simple_format(@mashup.description) %></p>
+
+<table class="table table-hover table-bordered">
+	<thead>
+		<th colspan=2 >APIs Used</th>
+	</thead>
+	<tbody>
+		<% @mashup.apis.each do |api| %>
+		<tr>
+			<td><%= link_to api.name, api_path(api) %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
