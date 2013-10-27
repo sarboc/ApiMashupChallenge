@@ -89,4 +89,5 @@ class MashupsController < ApplicationController
 		Mashup.delete(params[:id])
 		redirect_to mashups_path
 	end
+
 end

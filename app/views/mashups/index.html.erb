@@ -1,18 +1,5 @@
+<ul class="nav nav-pills pull-right">
+	<li><%= link_to "New", new_mashup_path %></li>
+</ul>
 <h2 class="page-header text-center">Mashups</h2>
-<p class="text-right"><%= link_to "New", new_mashup_path %></p>
-<table class="table table-hover">
-	<thead>
-		<th>Name</th>
-		<th>URL</th>
-		<th>APIs Used</th>
-	</thead>
-	<tbody>
-	<% @mashups.each do |mashup| %>
-		<tr>
-			<td><%= link_to mashup.name, mashup_path(mashup) %></td>
-			<td><%= link_to mashup.url, mashup.url%></td>
-			<td><%= mashup.apis.count %></td>
-		</tr>
-	<% end %>
-	</tbody>
-</table>
+<%= render "mashups-table" %>

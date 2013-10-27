@@ -35,4 +35,9 @@ class ApisController < ApplicationController
 		redirect_to apis_path
 	end
 
+	def mashups
+		@api = Api.find(params[:id])
+		@mashups = @api.mashups
+	end
+
 end

@@ -13,6 +13,10 @@
 	</thead>
 	<tbody>
 		<tr>
+			<td>Mashups:</td>
+			<td><%= link_to "#{@api.mashups.count} mashups made with this API", api_mashups_path(@api) %></td>
+		</tr>
+		<tr>
 			<td>API homepage:</td>
 			<td><%= link_to @api.url, @api.url %></td>
 		</tr>
@@ -20,19 +24,5 @@
 			<td>Developer key required:</td>
 			<td><%= @api.requires_key.capitalize %></td>
 		</tr>
-	</tbody>
-</table>
-
-<table class="table table-hover table-bordered">
-	<thead>
-		<th colspan=2 >Mashups using this API</th>
-	</thead>
-	<tbody>
-		<% @api.mashups.each do |mashup| %>
-		<tr>
-			<td><%= link_to mashup.name, mashup_path(mashup) %></td>
-			<td><%= link_to mashup.url, mashup.url %></td>
-		</tr>
-		<% end %>
 	</tbody>
 </table>
