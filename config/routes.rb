@@ -1,5 +1,6 @@
 ApiMashup::Application.routes.draw do
-  root to: "apis#index"
+  root to: "challenges#index"
+  get "/challenge", to: "challenges#show", as: "challenge"
   get "/apis/:id/mashups", to: "apis#mashups", as: "api_mashups"
   resources :apis
   resources :mashups

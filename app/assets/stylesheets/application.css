@@ -27,6 +27,7 @@
 	padding-bottom: 20px;
 	border-radius: 0 0 5px 5px;
 	background-color: white;
+	min-height: 500px;
 }
 
 .nav-container {
@@ -48,5 +49,9 @@
 
 ul.select2-results {
  max-height: 150px;
+}
+
+.jumbotron {
+	margin-top: 15px;
 }
 
