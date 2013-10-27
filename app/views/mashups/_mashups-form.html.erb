@@ -9,7 +9,7 @@
 	</div>
 	<div class="form-group">
 		<label for="apis">APIs used</label>
-		<%= select_tag(:api_id, options_for_select(@api_list), id: "multi-select", multiple: true) %>
+		<%= select_tag(:api_id, options_for_select(@api_list, selected: @selected), id: "multi-select", multiple: true, include_blank: true) %>
 	</div>
 	<div class="form-group">
 		<label for="description">Description</label>

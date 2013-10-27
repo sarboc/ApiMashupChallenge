@@ -1,8 +1,7 @@
-<p class="text-right">
-	<%= link_to "New", new_api_path %>  |  
-	<%= link_to "Edit",  edit_api_path(@api) %>  |  
-	<%= link_to "Delete",  api_path(@api), method: :delete %>
-</p>
+<ul class="nav nav-pills pull-right">
+	<li><%= link_to "Edit",  edit_api_path(@api) %></li>
+	<li><%= link_to "Delete",  api_path(@api), method: :delete %></li>
+</ul>
 
 <h2 class="page-header text-center"><%= @api.name %></h2>
 

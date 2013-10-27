@@ -19,6 +19,7 @@
 
 $(document).ready( function() {
 	$("select#multi-select").select2({
+		placeholder: "Select up to 5 APIs",
 		maximumSelectionSize: 5
 	});
 	// $(".selectpicker").selectpicker();
