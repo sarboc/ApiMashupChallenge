@@ -21,6 +21,6 @@ $(document).ready( function() {
 	$("select#multi-select").select2({
 		maximumSelectionSize: 5
 	});
-	$(".selectpicker").selectpicker();
+	// $(".selectpicker").selectpicker();
 })
 	

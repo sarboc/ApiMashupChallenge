@@ -9,10 +9,6 @@
 	</div>
 	<div class="form-group">
 		<label for="apis">APIs used</label>
-		<%= select_tag(:api_id, options_for_select(@api_list), class: "form-control selectpicker", multiple: true, data: {live_search: "true", size: "5"}, title: "Choose up to 5 APIs") %>
-	</div>
-	<div class="form-group">
-		<label for="apis">APIs used</label>
 		<%= select_tag(:api_id, options_for_select(@api_list), id: "multi-select", multiple: true) %>
 	</div>
 	<div class="form-group">
