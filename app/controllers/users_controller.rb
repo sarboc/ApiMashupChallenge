@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 		@new_user = User.create(params[:user])
 		sign_in(@new_user)
 
-		redirect_to root
+		redirect_to root_path
 	end
 
 	def show
