@@ -1,14 +1,10 @@
 ---
 rails.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
 rails/index.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
-application.js: application-721bd80476955796b1e23f022c7e1ac5.js
-application/index.js: application-721bd80476955796b1e23f022c7e1ac5.js
-application.css: application-c7e262c24b06f364c0f1f40040a168b3.css
-application/index.css: application-c7e262c24b06f364c0f1f40040a168b3.css
-chosen-sprite.png: chosen-sprite-0b638291e3ab1e89592983b5810b9b79.png
-chosen-sprite/index.png: chosen-sprite-0b638291e3ab1e89592983b5810b9b79.png
-chosen-sprite@2x.png: chosen-sprite@2x-8fa0fb1eb347c8dc10a5381b22383ac6.png
-chosen-sprite@2x/index.png: chosen-sprite@2x-8fa0fb1eb347c8dc10a5381b22383ac6.png
+application.js: application-4d685d706e1e846a7a8ec8c200f27eee.js
+application/index.js: application-4d685d706e1e846a7a8ec8c200f27eee.js
+application.css: application-15ff157986be894a41c33f588aee971d.css
+application/index.css: application-15ff157986be894a41c33f588aee971d.css
 jquery.min.map: jquery.min-6336c5bca4c709e809647cdfcb484d0a.map
 jquery/index.min.map: jquery.min-6336c5bca4c709e809647cdfcb484d0a.map
 select2-spinner.gif: select2-spinner-efec87a6e4d665ab02c27f9049095490.gif
