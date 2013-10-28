@@ -32,6 +32,12 @@ group :development, :test do
   gem 'sqlite3'
 end
 
+group :production do
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor', '0.0.2'
+  gem 'activerecord-postgresql-adapter'
+end
+
 gem "typhoeus", "~> 0.6.5"
 gem "oauth", "~> 0.4.7"
 

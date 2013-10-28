@@ -63,6 +63,7 @@ GEM
     mime-types (1.25)
     multi_json (1.8.2)
     oauth (0.4.7)
+    pg (0.15.1)
     polyglot (0.3.3)
     pry (0.9.12.2)
       coderay (~> 1.0.5)
@@ -87,6 +88,11 @@ GEM
       activesupport (= 3.2.14)
       bundler (~> 1.0)
       railties (= 3.2.14)
+    rails_12factor (0.0.2)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.1)
+    rails_stdout_logging (0.0.3)
     railties (3.2.14)
       actionpack (= 3.2.14)
       activesupport (= 3.2.14)
@@ -145,10 +151,12 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   jquery-rails
   oauth (~> 0.4.7)
+  pg (= 0.15.1)
   pry
   pry-rails
   quiet_assets
   rails (= 3.2.14)
+  rails_12factor (= 0.0.2)
   rspec-rails
   sass-rails (~> 3.2.3)
   select2-rails (~> 3.5.0)
