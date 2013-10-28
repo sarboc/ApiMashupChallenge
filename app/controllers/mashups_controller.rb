@@ -1,14 +1,10 @@
 class MashupsController < ApplicationController
 	def index
 		@mashups = Mashup.all
-		@mashups.each do |mashup|
-			mashup["apis"] = mashup.apis
-		end
 	end
 
 	def show
 		@mashup = Mashup.find(params[:id])
-		@mashup["apis"] = @mashup.apis
 
 	end
 

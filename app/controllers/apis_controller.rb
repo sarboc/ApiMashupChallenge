@@ -1,14 +1,10 @@
 class ApisController < ApplicationController
 	def index
 		@apis = Api.all
-		@apis.each do |api|
-			api["mashups"] = api.mashups
-		end
 	end
 
 	def show
 		@api = Api.find(params[:id])
-		@api["mashups"] = @api.mashups
 	end
 
 	def new

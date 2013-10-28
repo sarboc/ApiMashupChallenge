@@ -23,7 +23,7 @@
 
 .container {
 	width: 700px;
-	margin: 50px auto;
+	margin: 50px auto 0 auto;
 	padding-bottom: 20px;
 	border-radius: 0 0 5px 5px;
 	background-color: white;
@@ -53,5 +53,11 @@ ul.select2-results {
 
 .jumbotron {
 	margin-top: 15px;
+}
+
+footer {
+	width: 700px;
+	margin: 0 auto;
+	padding: 10px;
 }
 
