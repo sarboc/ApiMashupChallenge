@@ -1,4 +1,6 @@
 class MashupsController < ApplicationController
+	skip_before_filter :authenticate, except: [:edit, :update, :destroy]
+
 	def index
 		@mashups = Mashup.all
 	end

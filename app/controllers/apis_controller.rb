@@ -1,4 +1,6 @@
 class ApisController < ApplicationController
+	skip_before_filter :authenticate, only: [:index, :show, :mashups]
+
 	def index
 		@apis = Api.all
 	end

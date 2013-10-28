@@ -12,7 +12,13 @@
 			<%= yield %>
 	</div>
 	<footer>
-		<p class="text-right"><a href="#">Admin Login</a></p>
+		<p class="text-right">
+			<% if current_user %>
+				<%= link_to "Logout", logout_path %>
+			<% else %>
+				<%= link_to "Login", login_path %>
+			<% end %>
+		</p>
 	</footer>
 
 </body>

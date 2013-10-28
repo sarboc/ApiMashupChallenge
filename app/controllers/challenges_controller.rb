@@ -1,4 +1,6 @@
 class ChallengesController < ApplicationController
+	skip_before_filter :authenticate, only: [:index, :show]
+	
 	def index
 	end
 
@@ -24,7 +26,7 @@ class ChallengesController < ApplicationController
 			end
 
 			@api_ids += "-" if @apis.count < @level
-			
+
 		end
 
 	end

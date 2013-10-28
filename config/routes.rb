@@ -1,7 +1,12 @@
 ApiMashup::Application.routes.draw do
   root to: "challenges#index"
   get "/challenge", to: "challenges#show", as: "challenge"
+  get "/login", to: "sessions#new"
   get "/apis/:id/mashups", to: "apis#mashups", as: "api_mashups"
+  get "/logout", to: "sessions#destroy", as: "logout"
+  get "/login", to: "sessions#new", as: "login"
+  resources :sessions, only: [:create]
+  resources :users, only: [:new, :create, :show]
   resources :apis
   resources :mashups
 
