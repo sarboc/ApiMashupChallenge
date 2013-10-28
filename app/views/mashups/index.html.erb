@@ -1,5 +1,7 @@
-<ul class="nav nav-pills pull-right">
-	<li><%= link_to "New", new_mashup_path %></li>
-</ul>
+<% if current_user %>
+	<ul class="nav nav-pills pull-right">
+		<li><%= link_to "New", new_mashup_path %></li>
+	</ul>
+<% end %>
 <h2 class="page-header text-center">Mashups</h2>
 <%= render "mashups-table" %>
