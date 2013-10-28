@@ -1,5 +1,5 @@
 <div class="jumbotron text-center">
-	<h4>Your challenge is:</h4>
+	<h4>Create "<%= @mashup1 %>" or "<%= @mashup2 %>" using</h4>
 		<% @apis.each do |api| %>
 			<h2><%= api.name %></h2>
 			<% unless api == @apis.last %>
