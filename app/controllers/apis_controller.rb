@@ -3,6 +3,7 @@ class ApisController < ApplicationController
 
 	def index
 		@apis = Api.all
+		@apis.sort! {|a, b| a.name.downcase <=> b.name.downcase}
 	end
 
 	def show

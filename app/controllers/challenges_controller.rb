@@ -1,5 +1,6 @@
 class ChallengesController < ApplicationController
 	skip_before_filter :authenticate, only: [:index, :show]
+	include ChallengesHelper
 	
 	def index
 	end
@@ -46,6 +47,9 @@ class ChallengesController < ApplicationController
 		partial_string3 = @apis[1].name[0..@apis[1].name.length/2]
 		partial_string4 = @apis[0].name[@apis[0].name.length/2..@apis[0].name.length]
 		@mashup2 = partial_string3 + partial_string4
+
+		@mashup_names = mash_names(@apis)
+		
 
 	end
 end
