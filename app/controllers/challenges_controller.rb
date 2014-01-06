@@ -1,34 +1,24 @@
 class ChallengesController < ApplicationController
 	skip_before_filter :authenticate, only: [:index, :show]
 	include ChallengesHelper
-	
+
 	def index
 	end
 
 	def show
+		@level = 2
 		@apis = []
 		@api_ids = ""
-		@level = 2
 
-		# since not all ids are still in use, create a list of all possible api ids
-		possible_apis = []
-		Api.all.each do |api|
-			possible_apis << api.id
-		end
-
-		# set upper limit for random number generator
-		max = possible_apis.count - 1
-		
 		# level allows for future feature of user selecting how many random APIs to return
 		until @apis.count == @level
 
 			# choose a random number and find the api id of that array index
-			random = rand(0..max)
-			random_api = Api.find(possible_apis[random])
-			
-			# if the api exists in the databse and isn't already included in the array, add it
+			random_api = Api.all.sample
+
+			# if the api isn't already included in the array, add it
 			# also, add it to the params string to pass to the new mashup page for pre-selection
-			if random_api && !@apis.include?(random_api)
+			unless @apis.include?(random_api)
 				@apis << random_api
 				@api_ids += random_api.id.to_s
 			end
@@ -49,7 +39,7 @@ class ChallengesController < ApplicationController
 		@mashup2 = partial_string3 + partial_string4
 
 		@mashup_names = mash_names(@apis)
-		
+
 
 	end
 end
